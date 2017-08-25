@@ -47,13 +47,34 @@ class App extends Component {
             {"Date : " + this.state.date.toString()}
           </div>
           <div className="row">
-            <input type="text" name="particulars" placeholder="Enter Particulars here" value={this.state.formParticulars}/>
+            <input
+              type="text"
+              name="particulars"
+              placeholder="Enter Particulars here"
+              value={this.state.formParticulars}
+              ref="particulars"
+            />
           </div>
           <div className="row">
-            <input type="number" name="credit" placeholder="Enter Deposit Amount" value={this.state.formCreditAmount}/>
+            <input
+              name="credit"
+              placeholder="Enter Deposit Amount"
+              value={this.state.formCreditAmount}
+              ref="amount"
+            />
           </div>
           <div className="row">
-            <input type="submit" value="Submit"/>
+            <input
+              type="submit"
+              value="Submit"
+              onClick={() => {
+                this.setState({
+                  formCreditAmount: Number(this.refs.amount.value),
+                  formParticulars: this.refs.particulars.value
+                });
+                this.toggleFormDisplay();
+              }}
+            />
           </div>
         </div>
       );
@@ -65,6 +86,7 @@ class App extends Component {
     this.setState({formDisplay: !this.state.formDisplay})
   }
   render() {
+    console.log("state is : ", this.state);
     return (
       <div className="App">
         <Page
