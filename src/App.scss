@@ -3,7 +3,7 @@ body {
   background-color: #5a0403;
 }
 
-.Page {
+.page {
   background-color: floralwhite;
   max-width: 70vw;
   min-height: 400px;
@@ -24,6 +24,25 @@ body {
     content: '';
     &.double {
       width: 20vw;
+    }
+  }
+}
+
+.buttons-bar {
+  color: white;
+  position: relative;
+  top: 250px;
+  .button {
+    display: inline-block;
+    background-color: #2e0e4b;
+    padding: 20px;
+    font-size: 40px;
+    margin-right: 20px;
+    width: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:hover {
+      box-shadow: 0 0 0 0;
+      font-size: 35px;
     }
   }
 }

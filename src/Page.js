@@ -16,7 +16,7 @@ class Page extends Component {
       );
     });
     return (
-      <div className="Page">
+      <div className="page">
         <table>
           <tbody>
             <tr>
