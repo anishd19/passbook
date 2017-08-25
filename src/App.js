@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Page from './Page';
+import Buttons from './Buttons';
 import './App.css';
 
 class App extends Component {
@@ -41,6 +42,7 @@ class App extends Component {
         <Page
           entries = {this.dummyEntries}
         />
+        <Buttons/>
       </div>
     );
   }
