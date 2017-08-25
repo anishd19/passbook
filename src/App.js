@@ -8,8 +8,9 @@ class App extends Component {
     super(props);
     this.state = {
       date: new Date(Date.now()).toLocaleDateString(),
-      formParticulars: "test",
-      formCreditAmount: 15000
+      formDisplay: false,
+      formParticulars: null,
+      formCreditAmount: null
     }
   }
   componentWillMount() {
@@ -60,14 +61,17 @@ class App extends Component {
       return null;
     }
   }
+  toggleFormDisplay = () => {
+    this.setState({formDisplay: !this.state.formDisplay})
+  }
   render() {
     return (
       <div className="App">
         <Page
           entries = {this.dummyEntries}
         />
-        <Buttons/>
-      {this.displayCreditForm(true)}
+      <Buttons toggleFormDisplay = {this.toggleFormDisplay}/>
+      {this.displayCreditForm(this.state.formDisplay)}
       </div>
     );
   }

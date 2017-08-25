@@ -5,7 +5,7 @@ class Buttons extends Component {
   render() {
     let ButtonList = ["+", "-", "CHQ", "<", ">"]
     let ButtonsArray = ButtonList.map((Button, index) => (
-      <div className="button">{Button}</div>
+      <div className="button" onClick={this.props.toggleFormDisplay}>{Button}</div>
     ));
     return (
       <div className="buttons-bar">
