@@ -68,10 +68,16 @@ class App extends Component {
               type="submit"
               value="Submit"
               onClick={() => {
-                this.setState({
-                  formCreditAmount: Number(this.refs.amount.value),
-                  formParticulars: this.refs.particulars.value
-                });
+                this.dummyEntries.push(
+                  {
+                    date : this.state.date,
+                    particulars : this.refs.particulars.value,
+                    chequeNumber : null,
+                    debit : null,
+                    credit : Number(this.refs.amount.value),
+                    balance : 50000
+                  }
+                );
                 this.toggleFormDisplay();
               }}
             />
