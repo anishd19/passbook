@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  background-color: #5a0403;
+}
+
+.Page {
+  background-color: floralwhite;
+  max-width: 70vw;
+  min-height: 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 200px;
+  border-radius: 5% 5% 0 0;
+  table {
+    border-collapse: collapse;
+  }
+  th {
+    border-bottom: thin solid black;
+    width: 10vw;
+    padding: 5px 0 5px;
+    content: '';
+    &.double {
+      width: 20vw;
+    }
+  }
+}
